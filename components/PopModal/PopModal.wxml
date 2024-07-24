@@ -1,0 +1,13 @@
+
+<view hidden="{{!isShow}}" class="pop_modal" catchtouchmove="move">
+    <view class="content_wrap" animation="{{animationData}}">
+        <view class="header">
+            <text>{{title}}</text>
+            <image src="https://img.costrip.cn/kst-admin/close.svg" bindtap="handleHide" />
+        </view>
+        <slot></slot>
+  
+    </view>
+      <!-- 遮罩 -->
+    <view class="mask" animation="{{animationOpacity}}" catchtouchmove="true"></view>
+</view>

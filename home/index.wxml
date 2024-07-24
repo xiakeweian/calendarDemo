@@ -1,0 +1,14 @@
+<!--home/index.wxml-->
+<view class='home'>
+  <view bindtap='handleSelectDate'>
+    选中日期：
+    <block wx:if="{{selectDate.length}}">{{selectDate}}</block>
+    <block wx:else>请选择</block>
+  </view>
+</view>
+ <PopModal id="pop_modal_id" title="选择日期" bind:closeModal="handleCloseModal">
+   <view class="content">
+     <calendar title="" defaultTime="{{selectDate}}" defaultOpen="{{true}}" spotMap="{{spotMap}}" bindgetDateList="getDateList" bindselectDay="selectDay" bindopenChange="openChange" disabledDate="{{disabledDate}}" changeTime="{{changeTime}}" showShrink="{{false}}" firstDayOfWeek="1"></calendar>
+   </view>
+   <view class="footer" bindtap="handleConfirm">确定</view>
+ </PopModal>
