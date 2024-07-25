@@ -20,3 +20,23 @@
   box-sizing: border-box;
 
 }
+.select_date {
+  width: 60%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.pre_btn:after{
+  content: '\003C';
+  font-size: 30rpx;
+  color: #999999;
+  margin-right: 20rpx;
+}
+
+.next_btn:after{
+  content: '\003E';
+  font-size: 30rpx;
+  color: #999999;
+  margin-left:20rpx;
+}

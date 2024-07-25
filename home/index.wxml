@@ -1,9 +1,12 @@
 <!--home/index.wxml-->
 <view class='home'>
-  <view bindtap='handleSelectDate'>
+  <view bindtap='handleSelectDate' class="select_date flex">
     选中日期：
-    <block wx:if="{{selectDate.length}}">{{selectDate}}</block>
-    <block wx:else>请选择</block>
+    <view class="flex">
+      <view class="pre_btn" catchtap='handleChangeDate' data-type='pre'></view>
+      <block>{{selectDate}}</block>
+      <view class="next_btn" catchtap='handleChangeDate' data-type='next'></view>
+    </view>
   </view>
 </view>
  <PopModal id="pop_modal_id" title="选择日期" bind:closeModal="handleCloseModal">

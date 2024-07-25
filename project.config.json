@@ -30,9 +30,9 @@
         "packNpmRelationList": []
     },
     "compileType": "miniprogram",
-    "libVersion": "3.5.1",
+    "libVersion": "3.5.0",
     "appid": "wx88e86caa8044c9da",
-    "projectname": "cover-view-callout",
+    "projectname": "calendarDemo",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "condition": {},
