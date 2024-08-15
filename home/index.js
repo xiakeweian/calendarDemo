@@ -18,6 +18,7 @@ const dayjs = require('../utils/dayjs.js');
       y2024m7d22: 'repair-spot',
       y2024m7d23: 'deep-spot',
     },
+
     // 例子，今天之后的日期不能被选中
     disabledDate({ day, month, year }) {
       const now = new Date();
@@ -28,7 +29,8 @@ const dayjs = require('../utils/dayjs.js');
     changeTime: '',
     selectPopModalEle: null,
     selectDate: dayjs(new Date()).format('YYYY/MM/DD'),
-    tempSelectDate: {}
+    tempSelectDate: {},
+    threeMonthList: []
   },
   /**
    * 生命周期函数--监听页面加载
@@ -99,5 +101,20 @@ const dayjs = require('../utils/dayjs.js');
       }
       return date.getFullYear() + '/' + (date.getMonth() + 1).toString().padStart(2, '0') + '/' + date.getDate().toString().padStart(2, '0');
     },
+    getDateList(e) {
+      const { setYear, setMonth } = e.detail;
+      const curYearMonth = dayjs(`${setYear}-${setMonth}`).format('YYYY-MM');
+      const { threeMonthList } = this.data;
+      const newThreeMonthList = [...threeMonthList, curYearMonth].reduce((prev, cur) => {
+        prev.indexOf(cur) === -1 && prev.push(cur);
+        return prev
+      },[]);
+      this.setData({
+        threeMonthList: newThreeMonthList.slice(-3)
+      },() => {
+        console.log(this.data.threeMonthList, 'llllsssggg');
+      })
+
+    }
  
 })

@@ -11,7 +11,20 @@
 </view>
  <PopModal id="pop_modal_id" title="选择日期" bind:closeModal="handleCloseModal">
    <view class="content">
-     <calendar title="" defaultTime="{{selectDate}}" defaultOpen="{{true}}" spotMap="{{spotMap}}" bindgetDateList="getDateList" bindselectDay="selectDay" bindopenChange="openChange" disabledDate="{{disabledDate}}" changeTime="{{changeTime}}" showShrink="{{false}}" firstDayOfWeek="1"></calendar>
+     <calendar 
+      title="" 
+      defaultTime="{{selectDate}}" 
+      defaultOpen="{{true}}" 
+      spotMap="{{spotMap}}" 
+      bindgetDateList="getDateList" 
+      bindselectDay="selectDay" 
+      bindopenChange="openChange" 
+      disabledDate="{{disabledDate}}" 
+      changeTime="{{changeTime}}" 
+      showShrink="{{true}}" 
+      firstDayOfWeek="7" 
+      isShowFoldBtn="{{true}}"
+     />
    </view>
    <view class="footer" bindtap="handleConfirm">确定</view>
  </PopModal>

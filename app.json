@@ -5,7 +5,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "navigationBarTitleText": "map",
+    "navigationBarTitleText": "calendar",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

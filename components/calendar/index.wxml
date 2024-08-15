@@ -5,7 +5,7 @@
     <view class="title">
       <view class="header-wrap">
         <view class="flex">
-          <view class="title">{{title}}</view>
+          <view class="title" wx:if="{{title}}">{{title}}</view>
           <view class="month flex">
             <view class="change_icon" bindtap="lastMonth" style="transform:rotate(180deg);">
               <view class="iconfont icon-playfill"></view>
@@ -23,7 +23,7 @@
         </block>
       </view>
     </view>
-    	<view catchtap="openChange" class="flex open" wx:if="{{isShowFoldBtn}}">
+    	<view catchtap="openChange" class="flex open" wx:if="{{showShrink}}">
 			<view>{{open?"收起":"展开"}}</view>
 			<view style="margin-left:6rpx;font-size:20rpx" class="iconfont icon-{{open?'fold':'unfold'}}"></view>
 		</view>
@@ -46,8 +46,4 @@
       </view>
     </swiper-item>
   </swiper>
-  <!-- 展开收缩 -->
-  <!-- <view wx:if="{{showShrink}}" catchtap="openChange" class="flex list-open">
-    <view class="icon {{open?'fold':'unfold'}}"></view>
-  </view> -->
 </view>

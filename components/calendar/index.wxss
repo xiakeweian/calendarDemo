@@ -41,7 +41,6 @@
   .icon-playfill:before {
     content: "\e74f";
   }
-   
   .flex {
     display: flex;
     justify-content: space-between;
@@ -141,8 +140,11 @@
   }
    
   .calendar {
+    width: 100vw;
+    box-sizing: border-box;
     font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans", "Noto Sans CJK Sc", "Microsoft YaHei", "Microsoft Jhenghei", sans-serif;
     background:#fff;
+    padding: 0px 24rpx 24rpx;
   }
    
   .calendar .title {
@@ -212,7 +214,7 @@
   }
   .calendar .calendar-week {
     line-height: 40rpx;
-    padding: 0 22rpx;
+    padding: 0px;
     font-size: 28rpx;
     color: #999;
   }
@@ -223,7 +225,7 @@
   }
    
   .calendar .calendar-main {
-    padding: 18rpx 22rpx 0rpx;
+    padding: 18rpx 0px 0rpx;
     transition: height 0.3s;
     align-content: flex-start;
     overflow: hidden;

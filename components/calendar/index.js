@@ -27,7 +27,7 @@ Component({
       defaultOpen: {
         // 是否是打开状态
         type: Boolean,
-        value: false,
+        value: true,
       },
       showShrink: {
         // 是否显示收缩展开功能
@@ -45,10 +45,6 @@ Component({
         // 周起始日
         type: Number,
         value: 7,
-      },
-      isShowFoldBtn: {
-        type: Boolean,
-        value: false
       }
     },
    
@@ -89,7 +85,7 @@ Component({
         let date;
         // dif为1和-2
         if (dif === -2 || (dif > 0 && dif !== 2)) {
-          //向右划的情况，日期增加
+          //向左划的情况，日期增加
           if (this.data.open) {
             date = new Date(this.data.selectDay.year, this.data.selectDay.month);
             this.setMonth(date.getFullYear(), date.getMonth() + 1, undefined);
@@ -118,7 +114,7 @@ Component({
           }
         } else {
           // dif: -1和2
-          //向左划的情况，日期减少
+          //向右划的情况，日期减少
           if (this.data.open) {
             date = new Date(
               this.data.selectDay.year,
@@ -342,7 +338,7 @@ Component({
         let resetStartWeek = (startWeek + this.data.firstDayOfWeek - 1) % 7; //计算星期几的位置
         let dayNum = new Date(setYear, setMonth, 0).getDate(); //当前月有多少天
         let forNum = Math.ceil((resetStartWeek + dayNum) / 7) * 7; //当前月跨越的周数
-        let selectDay = setDay ? setDay : this.data.selectDay.day;
+        let selectDay = setDay || this.data.selectDay.day;
         this.triggerEvent('getDateList', {
           setYear: now.getFullYear(),
           setMonth: now.getMonth() + 1,
