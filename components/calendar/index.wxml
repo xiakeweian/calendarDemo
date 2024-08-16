@@ -35,7 +35,7 @@
     </view>
   </view>
   <!-- 日历主体 -->
-  <swiper class="swiper" style="height:{{swiperHeight}}rpx" bindchange="swiperChange" circular="{{true}}" current="{{swiperCurrent}}" duration="{{swiperDuration}}">
+  <swiper class="swiper" style="height:{{swiperHeight}}rpx" bindchange="swiperChange" circular="{{true}}" current="{{swiperCurrent}}" duration="{{swiperDuration}}" vertical="{{vertical}}">
     <swiper-item wx:for="{{[dateList0, dateList1, dateList2]}}" wx:for-index="listIndex" wx:for-item="listItem" wx:key="listIndex">
       <view class="flex-around flex-wrap calendar-main" style="height:{{listItem.length/7*82}}rpx">
         <view wx:for="{{listItem}}" wx:key="dateList" class="day">

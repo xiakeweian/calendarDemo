@@ -45,6 +45,10 @@ Component({
         // 周起始日
         type: Number,
         value: 7,
+      },
+      vertical: {
+        type: Boolean,
+        value: false
       }
     },
    

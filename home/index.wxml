@@ -24,6 +24,7 @@
       showShrink="{{true}}" 
       firstDayOfWeek="7" 
       isShowFoldBtn="{{true}}"
+      vertical="{{true}}"
      />
    </view>
    <view class="footer" bindtap="handleConfirm">确定</view>
